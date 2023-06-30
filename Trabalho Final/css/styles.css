@@ -1,0 +1,538 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.logo-container {
+  background-color: #ccc;
+  padding: 10px;
+  margin-left: -20px;
+}
+
+.logo-container h1 {
+  font-size: 24px;
+  color: #000;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 80px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+#background-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide h2 {
+  font-size: 24px;
+  text-align: justify;
+  color:#fff;
+  
+}
+
+.carousel-slide h2 span {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: black;
+}
+
+#background-container {
+  position: relative;
+}
+
+.carousel {
+  position: absolute;
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  font-size: 24px; 
+}
+
+.news-section {
+  margin: 50px auto;
+  max-width: 1000px;
+  background-color: #9ba7ac;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.news-section h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.news-item {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.news-title {
+  cursor: pointer;
+}
+
+.news-content {
+  display: none;
+}
+
+.services-section {
+  margin: 50px auto;
+  max-width: 1200px;
+  background-color: #9ba7ac;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.services-section h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex-basis: calc(25% - 20px);
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contact-section {
+  margin: 50px auto;
+  max-width: 800px;
+  background-color: #9ba7ac;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex-basis: 35%;
+}
+
+.contact-item {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contact-form {
+  flex-basis: 60%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.contact-btn {
+  background-color: black;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+}
+
+.contact-form form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #9ba7ac;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer-contact-info p {
+  margin: 5px 0;
+}
+
+.contact-btn {
+  background-color: black;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-btn {
+  background-color: black;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+body[id="services"] .nav-item a {
+    font-size: 1rem;
+}
+
+#services-background-image {
+    background-image: url('../img/ny.jpg');
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body[id="services"],
+body[id="services"] h2 {
+    color: white;
+}
+
+body[id="services"] .services-page-item h3,
+body[id="services"] .services-page-item p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.services-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.services-page-row {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 2rem;
+}
+
+.services-page-item {
+    border: 1px solid white;
+    background-color: #9ba7ac;
+    padding: 20px;
+    width: 45%;
+}
+
+.services-page-item h3 {
+    margin-top: 0;
+}
+
+.services-page-item p {
+    margin-bottom: 0;
+}
+
+.stat-block {
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    text-align: center;
+}
+
+h2, h3 {
+    margin: 0;
+    color: #333;
+}
+
+p {
+    margin: 1em 0;
+    color: #666;
+}
+
+.sobre-page-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.large-block {
+  flex-basis: 48%;
+  background-color: #9ba7ac;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+}
+
+.small-blocks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-basis: 48%;
+}
+
+.small-block {
+  flex-basis: 48%;
+  background-color: #9ba7ac;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2%;
+  color: #fff;
+}
+
+
+.team-page-container {
+  /* Estilização similar à .services-page-container */
+  width: 80%;
+  margin: 0 auto;
+}
+
+.team-page-row {
+  /* Estilização similar à .services-page-row */
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-member {
+  /* Estilização similar à .services-page-item, mas adicionando o layout para a imagem */
+  width: 48%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: left;
+}
+
+.team-member img {
+  /* Estilização para a imagem dos membros da equipe */
+  float: left;
+  margin-right: 20px;
+  max-width: 30%; 
+  height: auto;
+}
+
+.team-member p {
+  color: white; 
+}
+
+.team-member h3 {
+  color: white; 
+}
+
+body#contact {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+body#contact header {
+  color: #000;
+  background-color: #fff;
+}
+
+body#contact #contact-background-image {
+  background: url('../img/ny.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 300px;
+}
+
+body#contact .contact-page-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+body#contact .contact-form,
+body#contact .contact-info {
+  flex-basis: 45%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+}
+
+body#contact .contact-form form label,
+body#contact .contact-form form input,
+body#contact .contact-form form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+body#contact .contact-form form input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+body#contact .contact-info .map-container iframe {
+  width: 100%;
+  height: 300px;
+}
+
+body#contact .contact-info .contact-details {
+  margin-top: 15px;
+}
+
+body#contact .contact-info .work-with-us {
+  margin-top: 15px;
+}
+
+body#contact .contact-info .work-with-us button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal-content label,
+.modal-content input {
+  width: 100%;
+  margin-bottom: 10px;
+}
